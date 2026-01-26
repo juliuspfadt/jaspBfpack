@@ -932,10 +932,10 @@
 
   if (!bfpackContainer$getError()) {
     spec <- bfpackContainer[["resultsContainer"]][["resultsState"]]$object$BFtable_confirmatory
-    if (options[["logScale"]]) {
-      spec <- log(spec)
-    }
     if (!is.null(spec)) {
+      if (options[["logScale"]]) {
+        spec <- log(spec)
+      }
       dtFill <- data.frame(hypothesis = paste0(gettext("H"), seq(1:nrow(spec))))
       dtFill[, c("complex=", "complex>", "fit=", "fit>", "BF=", "BF>", "BF", "PHP")] <- spec[, 1:8]
       specTable$setData(dtFill)

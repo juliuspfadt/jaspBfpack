@@ -95,7 +95,7 @@ Section
 		}
 		CheckBox
 		{
-			visible: 					iterationsEst
+			visible: 					correlation
 			name: 						"priorPosteriorPlot"
 			text: 						qsTr("Prior and posterior plot")
 			CheckBox {	name: "priorPosteriorPlotAdditionalEstimationInfo";	label: qsTr("Estimation info");		checked: true }
@@ -103,7 +103,7 @@ Section
 		}
 		CheckBox
 		{
-			visible: 					iterationsEst
+			visible: 					correlation
 			name: 						"traceplot"
 			text: 						qsTr("Traceplot")
 		}

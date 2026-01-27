@@ -60,7 +60,7 @@ Form
 	Common.Options{
 		bfTy: true
 		interactions: true
-		interactionValues: covariates.columnsNames
+		interactionValues: predictors.columnsNames
 		intercept: true
 	}
 }

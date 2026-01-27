@@ -20,24 +20,21 @@ bfpackRegressionLinear <- function(jaspResults, dataset, options, ...) {
   # What type of BFpack analysis is being conducted?
   type <- "regression"
 
-  # Check if current options allow for analysis
   ready <- .bfpackOptionsReady(options, type)
 
-  # handle the data set
   dataset <- .bfpackHandleData(dataset, options, ready = ready)
 
-  # Check if current data allow for analysis
   .bfpackDataReady(dataset, options, type, ready)
 
-  # Create a container for the results
-  bfpackContainer <- .bfpackCreateContainer(jaspResults,
-                                            deps = c("dependent", "predictors",
-                                                     "seed", "setSeed", "manualHypotheses", "bfType",
-                                                     "standardize", "excludeIntercept"))
+  bfpackContainer <- .bfpackCreateContainer(
+    jaspResults,
+    deps = c("dependent", "predictors",
+             "seed", "setSeed", "manualHypotheses", "bfType",
+             "standardize", "excludeIntercept")
+  )
 
   .bfpackGetParameterEstimates(dataset, options, bfpackContainer, ready, type, jaspResults)
 
-  # compute the results, aka BFs
   .bfpackComputeResults(dataset, options, bfpackContainer, ready, type)
 
   .bfpackPosteriorParameterTable(options, bfpackContainer, type, dataset, position = 1)

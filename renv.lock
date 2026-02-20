@@ -2361,7 +2361,6 @@
         "scales"
       ],
       "RemoteType": "github",
-      "RemoteHost": "api.github.com",
       "RemoteUsername": "jasp-stats",
       "RemoteRepo": "jaspGraphs",
       "RemoteSha": "1a0f11bf210637b7428f337f8598bee8a62c8495"
@@ -4049,7 +4048,7 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "1.1.6",
+      "Version": "1.1.7",
       "Source": "Repository",
       "Type": "Package",
       "Title": "Project Environments",

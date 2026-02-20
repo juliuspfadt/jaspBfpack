@@ -40,7 +40,6 @@
       dataset[, cindex] <- scale(dataset[, cindex])
     }
   }
-  print(str(dataset))
 
   return(dataset)
 }
